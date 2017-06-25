@@ -1,0 +1,5 @@
+2.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE\xlocale(341): warning C4530: C++ exception handler used, but unwind semantics are not enabled. Specify /EHsc
+C:\Pesquisa\Ferramenta\140\0\2.cpp(10): error C2086: 'int i': redefinition
+C:\Pesquisa\Ferramenta\140\0\2.cpp(10): note: see declaration of 'i'
+C:\Pesquisa\Ferramenta\140\0\2.cpp(10): error C2143: syntax error: missing ';' before '>'

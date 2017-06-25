@@ -1,0 +1,7 @@
+0.cpp
+Microsoft (R) Incremental Linker Version 14.00.24215.1
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+/out:0.exe 
+0.obj 
+LINK : fatal error LNK1104: cannot open file 'LIBCMT.lib'

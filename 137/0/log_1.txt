@@ -1,0 +1,6 @@
+C:\Pesquisa\Ferramenta\137\0\1.cpp: In function 'int main()':
+C:\Pesquisa\Ferramenta\137\0\1.cpp:10:22: error: expected initializer before '>' token
+     for (int i =n, i > 1; i--) {
+                      ^
+C:\Pesquisa\Ferramenta\137\0\1.cpp:10:22: error: expected ';' before '>' token
+C:\Pesquisa\Ferramenta\137\0\1.cpp:10:22: error: expected primary-expression before '>' token

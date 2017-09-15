@@ -39,7 +39,6 @@
 	$readCompile = fopen("configVisual.txt", "r") or die("Unable to open file!");
 	$compile = fread($readCompile, 100);
 	fclose($readCompile);
-    //$compileLog = shell_exec($compile." ".getcwd()."\\{$question}\\{$num}.cpp >{$question}\\log_{$num}.txt");
 	$sbat = 'C:\\"Program Files (x86)"\\"Microsoft Visual Studio 14.0"\\VC\\bin\\vcvars32.bat & ';
     $compileLog = shell_exec($sbat.$compile." ".getcwd()."\\{$question}\\{$num}.cpp >{$question}\\log_{$num}.txt");
 

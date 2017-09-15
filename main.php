@@ -192,7 +192,6 @@
 						           var newdata = data.replace(reg,'','C:.Pesquisa.Ferramenta.[0-9]*.[0-9]*.[0-9]*\.cpp');
 						           $('#logDeSaida').html(newdata);
 						       }else{
-						           alert("demmint");
 						           $('#logDeSaida').html(data);
 						       }
 

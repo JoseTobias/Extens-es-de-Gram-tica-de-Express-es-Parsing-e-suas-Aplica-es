@@ -39,13 +39,11 @@
 	/*$readCompileConfig = fopen("configVisual2.txt", "r") or die("Unable to open file11!");
 	$compileConfig = fread($readCompileConfig, 300);
 	fclose($readCompileConfig);*/
-	//$compileConfigLog = shell_exec('C:\\"Program Files (x86)"\\"Microsoft Visual Studio 14.0"\\VC\\bin\\vcvars32.bat');
 
 	//CONFIGURAR O CAMINHO DO COMPILADOR NO ARQUIVO "configVisual.txt"
 	$readCompile = fopen("configVisual.txt", "r") or die("Unable to open file!");
 	$compile = fread($readCompile, 100);
 	fclose($readCompile);
-	//$compileLog = shell_exec($sbat." \&\& "$compile." ".getcwd()."\\{$question}\\{$num}.cpp >{$question}\\log_{$num}.txt");
 	$sbat = 'C:\\"Program Files (x86)"\\"Microsoft Visual Studio 14.0"\\VC\\bin\\vcvars32.bat & ';
     $compileLog = shell_exec($sbat.$compile." ".getcwd()."\\{$question}\\{$num}.cpp >{$question}\\log_{$num}.txt");
 

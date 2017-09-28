@@ -106,11 +106,10 @@
 				editor.session.setMode("ace/mode/c_cpp");
 				document.getElementById("botao").click();
 				start_time = new Date();
-				if(primeira_compilacao){
+				if(primeira_compilacao)
 					time();
 					primeira_compilacao = false;
 
-				}
 			});
 
 		};
@@ -152,7 +151,7 @@
 			timeDiff = Math.floor(timeDiff / 60);
 			var minutes = Math.round(timeDiff % 60);
 
-			if(minutes>=5)
+			if(minutes>=1)
 				document.getElementById("proximo").click()
 
 		    timer_timeout = setTimeout(time, 1000);
@@ -179,7 +178,9 @@
 						   // got success data
 						   //alert(data);
 						   //alert('Compilado com sucesso');
-						   if(!data){
+						   var comp = new RegExp('erro');
+						   //if(!data){
+                            if(!comp.test(data)){
 							   alert("Código compilado com sucesso");
 							   document.getElementById("proximo").click();
 						   }

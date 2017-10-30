@@ -1,0 +1,6 @@
+(11): erro: Erro de sintaxe: ';'
+(15): erro: Erro de sintaxe: faltando ';' antes de '<<'
+(15): erro: Especificador de tipo ausente - int assumido. Nota: C++ int- não suporta padrão
+(16): erro: Erro de sintaxe: 'return'
+(17): erro: Erro de sintaxe: '}'
+(17): erro: Erro de sintaxe: faltando ';' antes de '}'

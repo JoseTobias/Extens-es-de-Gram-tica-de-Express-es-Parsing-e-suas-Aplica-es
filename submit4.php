@@ -10,6 +10,8 @@
 	//2>&1 pra poder pegar a mensagem de erro do terminal
 	$cd = shell_exec("cd {$question} 2>&1");
 
+    $contAux = fopen("contador.txt", "w");
+    fwrite($contAux, $question);
 	if($cd != null){
 		$mkdir = shell_exec("mkdir {$question}");
 

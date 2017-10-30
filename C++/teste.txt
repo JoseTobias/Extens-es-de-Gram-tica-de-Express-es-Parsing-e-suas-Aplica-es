@@ -1,0 +1,2 @@
+bhegyexpected X before Y
+xehweexpected X at end of input

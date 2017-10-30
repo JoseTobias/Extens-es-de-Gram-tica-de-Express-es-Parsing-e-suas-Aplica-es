@@ -1,0 +1,8 @@
+1.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE\xlocale(341): warning C4530: C++ exception handler used, but unwind semantics are not enabled. Specify /EHsc
+C:\Pesquisa\Ferramenta\435\3\1.cpp(11): error C2059: syntax error: ';'
+C:\Pesquisa\Ferramenta\435\3\1.cpp(15): error C2143: syntax error: missing ';' before '<<'
+C:\Pesquisa\Ferramenta\435\3\1.cpp(15): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Pesquisa\Ferramenta\435\3\1.cpp(16): error C2059: syntax error: 'return'
+C:\Pesquisa\Ferramenta\435\3\1.cpp(17): error C2059: syntax error: '}'
+C:\Pesquisa\Ferramenta\435\3\1.cpp(17): error C2143: syntax error: missing ';' before '}'

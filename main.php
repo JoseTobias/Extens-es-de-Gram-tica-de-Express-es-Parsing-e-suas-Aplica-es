@@ -1,5 +1,6 @@
 <?php
 	session_start();
+	#ini_set('default_charset','UTF-8');
 ?>
 <!DOCTYPE html>
 <html>
@@ -54,7 +55,7 @@
 	</head>
 	<body>
 
-		<!----------------------------------------------------------------------------------------------->
+		<!------------------------------------------------------------------------------------------------>
 		<div class="row" style="height:70%">
 			<div class="col-xs-12" style="height:100%">
 				<div class="well" id="codigo">
@@ -72,12 +73,11 @@
 		<div class="row" style="height:20%">
 			<div class="col-xs-12">
 				<textarea rows=6 cols=190 readonly='true' id="logDeSaida">
-
 				</textarea>
 			</div>
 		</div>
 
-		<!----------------------------------------------------------------------------------------------->
+		<!------------------------------------------------------------------------------------------------>
 
 		<script src="ace-builds-master/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
 		<script>
@@ -151,8 +151,10 @@
 			timeDiff = Math.floor(timeDiff / 60);
 			var minutes = Math.round(timeDiff % 60);
 
-			if(minutes>=1)
+			if(minutes>=10){
+				alert('Seu tempo nesse código esgotou. Gostaria de passar para o próximo?');
 				document.getElementById("proximo").click()
+            }
 
 		    timer_timeout = setTimeout(time, 1000);
 		}

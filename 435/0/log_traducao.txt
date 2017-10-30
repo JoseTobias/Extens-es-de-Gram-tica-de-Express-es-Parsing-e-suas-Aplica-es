@@ -1,0 +1,2 @@
+(10): erro: Redefinição de 'int i': 
+(10): erro: Erro de sintaxe: faltando ';' antes de '>'

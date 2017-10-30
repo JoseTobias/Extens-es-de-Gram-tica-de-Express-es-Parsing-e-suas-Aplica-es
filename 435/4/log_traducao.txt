@@ -1,0 +1,1 @@
+(3): erro: O símbolo esquerda '{' foi incomparável no final do arquivo

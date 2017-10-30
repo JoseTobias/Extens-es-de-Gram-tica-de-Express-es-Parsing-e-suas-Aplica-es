@@ -2,6 +2,7 @@
 	/**
 		AQUI VAI POSSUIR O ARQUIVO DE TEXTO, PODE SER CHAMADO UM EXECUTAVEL COM ALGORITMO PARA COMPILAR OS ARQUIVOS
 	**/
+	header("content-type: text/html;charset=utf-8");
 	session_start();
 	$matricula = $_SESSION["matricula"];
 	$question = $_POST['question'];
@@ -10,6 +11,8 @@
 	//2>&1 pra poder pegar a mensagem de erro do terminal
 	$cd = shell_exec("cd {$question} 2>&1");
 
+    $contAux = fopen("contador.txt", "w");
+    fwrite($contAux, $question);
 	if($cd != null){
 		$mkdir = shell_exec("mkdir {$question}");
 
@@ -42,9 +45,15 @@
 	$compileLog = shell_exec($compile." ".getcwd()."\\{$question}\\{$num}.cpp 2>{$question}\\log_{$num}.txt");
 
 	$log = fopen("{$question}\\log_{$num}.txt", "r");
-	$saida = fread($log, 1000);
+	//$saida = fread($log, 1000);
 	fclose($log);
 
-	echo $saida;
-	return $saida;
+	shell_exec("cd C:\\Pesquisa\\Ferramenta\\C++ && traducao_gcc.exe" );
+
+	$log_t = fopen("{$question}\\log_traducao.txt", "r");
+	$saida = fread($log_t, 1000);
+	fclose($log_t);
+
+	echo utf8_encode($saida);
+	return utf8_encode($saida);
 ?>

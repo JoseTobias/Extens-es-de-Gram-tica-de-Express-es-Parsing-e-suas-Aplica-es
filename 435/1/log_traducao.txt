@@ -1,0 +1,2 @@
+(11): erro: Erro de sintaxe: '>'
+(11): erro: Erro de sintaxe: faltando ';' antes de '{'

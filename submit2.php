@@ -48,7 +48,7 @@
 	//$saida = fread($log, 1000);
 	fclose($log);
 
-	shell_exec("cd C:\\Pesquisa\\Ferramenta\\C++ && traducao_gcc.exe" );
+	shell_exec("cd .. && cd C++ && traducao_gcc.exe" );
 
 	$log_t = fopen("{$question}\\log_traducao.txt", "r");
 	$saida = fread($log_t, 1000);

@@ -151,7 +151,7 @@
 			timeDiff = Math.floor(timeDiff / 60);
 			var minutes = Math.round(timeDiff % 60);
 
-			if(minutes>=10){
+			if(minutes>=9){
 				alert('Seu tempo nesse código esgotou. Gostaria de passar para o próximo?');
 				document.getElementById("proximo").click()
             }
@@ -181,8 +181,9 @@
 						   //alert(data);
 						   //alert('Compilado com sucesso');
 						   var comp = new RegExp('erro');
+						   var comp1 = new RegExp('Microsoft');
 						   //if(!data){
-                            if(!comp.test(data)){
+                            if(!comp.test(data) && !comp1.test(data)){
 							   alert("Código compilado com sucesso");
 							   document.getElementById("proximo").click();
 						   }
@@ -191,7 +192,15 @@
 						       abriu = false;
 						   }else{
 						       var reg = new RegExp('C:.Pesquisa.Ferramenta.[0-9]*.[0-9]*.[0-9]*\.cpp','g');
-						       if(reg.test(data)){
+						       var r = new RegExp('0\.cpp','g');
+						       var r2 = new RegExp('ld returned 1 exit status','g');
+						       if(data[0] == 'e'){
+						           $('#logDeSaida').html("");
+						       }else if(r2.test(data)){
+						           $('#logDeSaida').html("");
+						       }else if(r.test(data)){
+						           $('#logDeSaida').html("");
+						       }else if(reg.test(data)){
 						           var newdata = data.replace(reg,'','C:.Pesquisa.Ferramenta.[0-9]*.[0-9]*.[0-9]*\.cpp');
 						           $('#logDeSaida').html(newdata);
 						       }else{
@@ -219,10 +228,10 @@
 			$('#proximo').click(function(){
 				if((codigo_atual+1) == codigos.length-1){
 					alert("Parabéns, você já concluiu as atividades, por favor preencha o seguinte questionário.");
-					window.location = "https://docs.google.com/forms/d/e/1FAIpQLSeAhR-yIqg1fpKFYmCWVfZY7JTPaGlUFmoQoHhJb7RzIVA5rg/viewform?c=0&w=1";
+					window.location = "https://docs.google.com/forms/d/e/1FAIpQLSf73jYNg_q4pNvN4LT1HUgV0LMdZE7F3l7HZ9f_brW-zMYQsQ/viewform?c=0&w=1";
 				}
 				else{
-					codigo_atual = codigo_atual + 1
+					codigo_atual = codigo_atual + 1;
 					load_code(codigos[codigo_atual]);
 					$('#logDeSaida').html("");
 					abriu = true;
